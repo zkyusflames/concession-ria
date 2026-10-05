@@ -1,0 +1,1354 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Às Claras Multimarcas | Carro usado, sem nada escondido</title>
+<meta name="description" content="Loja multimarcas com laudo na mão, preço final no anúncio e avaliação justa do seu usado. Hatch, sedã, SUV e picape. Agende uma visita.">
+<meta name="theme-color" content="#0f2f22">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f2f22'/%3E%3Cpath d='M7 8h18v4H7zM7 14h18v4H7z' fill='%23f4efe4'/%3E%3Cpath d='M7 23h18' stroke='%23e9b872' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Às Claras Multimarcas">
+<meta property="og:description" content="Carro usado, sem nada escondido. Laudo na mão, preço final no anúncio e avaliação justa do seu usado.">
+<!-- DEPLOY STEP: troque os dois enderecos abaixo pela URL real do site antes de publicar -->
+<meta property="og:url" content="https://SEU-DOMINIO/">
+<meta property="og:image" content="https://SEU-DOMINIO/assets/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --canvas:#ece4d8;
+  --panel:#f5efe6;
+  --panel-2:#e2d7c8;
+  --line:#d2c6b5;
+  --line-strong:#7a7d70;
+  --emerald:#0e5a40;
+  --emerald-hover:#0a4631;
+  --emerald-deep:#0f2f22;
+  --emerald-ink:#0a2218;
+  --accent-muted:rgba(14,90,64,.2);
+  --sun:#e9b872;
+  --text-secondary:#4a5850;
+  --text-primary:#10231b;
+  --on-emerald:#f4efe4;
+  --on-emerald-2:#b9cbbd;
+  --ease-out:cubic-bezier(.22,1,.36,1);
+  --ease-io:cubic-bezier(.65,0,.35,1);
+  --tshadow:0 1px 2px rgba(4,18,12,.9),0 3px 12px rgba(4,18,12,.62),0 10px 44px rgba(4,18,12,.6);
+  --f-display:"Bricolage Grotesque","Arial Black","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --nav-h:72px;
+  /* where the footage sits on screen: the video covers the stage, anchored 8% from its top */
+  --vid-h:max(100vh,56.25vw);
+  --roof:calc(var(--vid-h)*.32 + 8vh);
+  --floor:calc(var(--vid-h)*.74 + 8vh);
+  --media-h:min(69vw,56vh);
+}
+@supports (height:100svh){
+  :root{--vid-h:max(100svh,56.25vw);--roof:calc(var(--vid-h)*.32 + 8svh);--floor:calc(var(--vid-h)*.74 + 8svh);--media-h:min(69vw,56svh)}
+}
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--canvas);overflow-x:hidden;overflow-x:clip;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;overflow-x:hidden;overflow-x:clip;background:transparent;color:var(--text-primary);font-family:var(--f-body);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased;animation:pageIn .9s var(--ease-out) both}
+@keyframes pageIn{from{opacity:0}to{opacity:1}}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3,p,ul,ol,dl,dd,figure,blockquote{margin:0}
+ul,ol{padding:0;list-style:none}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:fixed;left:16px;top:-80px;z-index:100;background:var(--emerald);color:var(--on-emerald);padding:12px 18px;border-radius:8px;font-weight:600;text-decoration:none;transition:top .3s var(--ease-out)}
+.skip:focus{top:12px}
+:focus-visible{outline:2px solid var(--focus,var(--emerald));outline-offset:3px;border-radius:4px}
+.hero,.visita,.foot,.quote.big,.nav:not(.solid){--focus:var(--sun)}
+.visita .form{--focus:var(--emerald)}
+main:focus{outline:none}
+.wrap{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+
+/* the gate: horizontal slats in morning sun. The one signature of the page */
+.slats{background-color:#0f4635;background-image:linear-gradient(105deg,rgba(233,184,114,.22) 0%,rgba(233,184,114,0) 44%),repeating-linear-gradient(180deg,rgba(255,255,255,.17) 0 1px,rgba(255,255,255,.03) 1px 8px,rgba(0,0,0,.05) 8px 17px,rgba(0,0,0,.42) 17px 20px)}
+
+/* the one fixed environment behind everything: sunlit concrete, two slow beams, dust in the light */
+.env{position:fixed;top:0;right:0;bottom:0;left:0;z-index:-1;pointer-events:none;overflow:hidden;background:var(--canvas)}
+.env::before{content:"";position:absolute;top:-30%;right:-30%;bottom:-30%;left:-30%;background:linear-gradient(115deg,rgba(255,250,238,0) 28%,rgba(255,249,234,.6) 37%,rgba(255,250,238,0) 46%,rgba(255,250,238,0) 57%,rgba(255,247,228,.45) 64%,rgba(255,250,238,0) 72%);animation:envDrift 90s ease-in-out -20s infinite alternate}
+.env::after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .2  0 0 0 0 .16  0 0 0 0 .1  0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E")}
+@keyframes envDrift{from{transform:translate3d(-5%,-2%,0)}to{transform:translate3d(6%,3%,0)}}
+.mote{position:absolute;left:var(--x);top:var(--y);width:var(--s,3px);height:var(--s,3px);border-radius:50%;background:#c9964a;opacity:0;animation:mote var(--d,26s) linear var(--dl,-4s) infinite}
+@keyframes mote{0%{opacity:0;transform:translate3d(0,0,0)}14%{opacity:.34}80%{opacity:.2}100%{opacity:0;transform:translate3d(var(--mx,30px),-140px,0)}}
+body.paused *,body.paused *::before,body.paused *::after{animation-play-state:paused !important}
+
+/* type */
+.kicker{font-family:var(--f-mono);font-size:.75rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--emerald)}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance}
+h2{font-weight:800;font-size:clamp(2rem,3.9vw,3.5rem);line-height:1.03;letter-spacing:-.03em;max-width:17ch}
+h3{font-weight:800;font-size:clamp(1.15rem,1.6vw,1.4rem);line-height:1.15;letter-spacing:-.015em}
+.lede{color:var(--text-secondary);font-size:1.125rem;max-width:44ch}
+.fine{font-size:.875rem;color:var(--text-secondary)}
+
+/* buttons and links */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;border:0;border-radius:8px;background:var(--emerald);color:var(--on-emerald);font:600 1rem/1 var(--f-body);text-decoration:none;cursor:pointer;position:relative;transition:background-color .35s var(--ease-out),color .35s var(--ease-out),transform .35s var(--ease-out)}
+.btn::after{content:"";position:absolute;top:-1px;right:-1px;bottom:-1px;left:-1px;border-radius:inherit;box-shadow:0 12px 34px rgba(14,90,64,.42);opacity:0;transition:opacity .45s var(--ease-out);pointer-events:none}
+.btn:hover{background:var(--emerald-hover);transform:translateY(-2px)}
+.btn:hover::after{opacity:1}
+.btn:active{transform:translateY(0)}
+.btn.light{background:var(--on-emerald);color:var(--emerald-ink)}
+.btn.light::after{box-shadow:0 12px 34px rgba(4,18,12,.5)}
+.btn.light:hover{background:#fffaf0}
+.link{position:relative;color:inherit;text-decoration:none;font-weight:600;padding:6px 0}
+.link::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:currentColor;transform:scaleX(.28);transform-origin:left;opacity:.7;transition:transform .5s var(--ease-out),opacity .5s var(--ease-out)}
+.link:hover::after{transform:scaleX(1);opacity:1}
+
+/* nav: cream over the gate, ink once the page turns to concrete */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;height:var(--nav-h);display:flex;align-items:center;color:var(--on-emerald);transition:color .5s var(--ease-out)}
+.nav.solid{color:var(--text-primary)}
+.nav::before{content:"";position:absolute;top:0;right:0;bottom:0;left:0;background:rgba(236,228,216,.9);border-bottom:1px solid var(--line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);opacity:0;transition:opacity .5s var(--ease-out)}
+.nav.solid::before{opacity:1}
+.nav-in{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;width:min(1320px,calc(100% - 40px));margin-inline:auto}
+.brand{display:inline-flex;align-items:center;gap:11px;text-decoration:none;min-height:44px}
+.brand svg{width:28px;height:28px;flex:none}
+.brand b{font-family:var(--f-display);font-weight:800;font-size:1.3rem;letter-spacing:-.02em}
+.nav-links{display:flex;align-items:center;gap:clamp(14px,2vw,30px);font-size:.95rem}
+.nav-links .link{font-weight:500}
+.nav-links .link::after{transform:scaleX(0)}
+.nav-links .link:hover::after{transform:scaleX(1)}
+.nav .btn{min-height:44px;padding:0 20px;font-size:.95rem;background:var(--on-emerald);color:var(--emerald-ink)}
+.nav .btn:hover{background:#fffaf0}
+.nav.solid .btn{background:var(--emerald);color:var(--on-emerald)}
+.nav.solid .btn:hover{background:var(--emerald-hover)}
+.nav:not(.solid) .brand b,.nav:not(.solid) .nav-links .link{text-shadow:0 1px 8px rgba(4,18,12,.6)}
+@media (max-width:1060px){.nav-links .link{display:none}}
+@media (max-width:420px){.brand b{font-size:1.15rem}.nav .btn{padding:0 16px;font-size:.875rem}}
+
+/* hero: tall pinned region, sticky stage */
+.hero{position:relative;height:600vh;background:var(--emerald-deep)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;isolation:isolate;color:var(--on-emerald)}
+.media{position:absolute;top:0;right:0;bottom:0;left:0;overflow:hidden;background:var(--emerald-deep)}
+.poster,.poster-end,.media video,.media canvas{position:absolute;left:0;top:0;width:100%;height:100%}
+.poster,.poster-end{background-size:cover;background-position:50% 8%}
+.poster-end{opacity:0}
+.media video,.media canvas{object-fit:cover;object-position:50% 8%;opacity:0}
+.media video{transition:opacity .9s var(--ease-out);will-change:transform;transform:translateZ(0)}
+.media canvas{transition:opacity .6s var(--ease-out)}
+.stage.video-ready video{opacity:1}
+.stage.video-failed video{display:none}
+.stage.seq-ready canvas{opacity:1}
+.scrim{position:absolute;top:0;right:0;bottom:0;left:0;pointer-events:none;background:linear-gradient(rgba(5,22,15,.58) 0%,rgba(5,22,15,.2) 15%,rgba(5,22,15,0) 30%)}
+.stage::after{content:"";position:absolute;left:0;right:0;bottom:0;z-index:1;height:20vh;background:linear-gradient(rgba(236,228,216,0),var(--canvas));pointer-events:none;opacity:var(--foot,0)}
+.ring,.cue{z-index:2}
+/* the words live on the gate and then on the wall, above the roofs of the cars */
+.band{z-index:2;position:absolute;left:0;right:0;margin-inline:auto;width:min(92vw,1180px);top:var(--nav-h);height:calc(var(--roof) - var(--nav-h) - 3vh);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;opacity:0;visibility:hidden;text-shadow:var(--tshadow)}
+.band.b1{height:calc(var(--floor) - var(--nav-h) - 96px)}
+.band-in{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px;isolation:isolate}
+/* the scrim hugs the words: a soft dark plate that dims the slats behind the text and leaves the rest of the gate alone */
+.band-in::before{content:"";position:absolute;top:-14px;right:-40px;bottom:-20px;left:-40px;z-index:-1;border-radius:44px;pointer-events:none;opacity:calc(.25 + .75*var(--k,1));background:rgba(4,18,12,var(--sa,.6));box-shadow:0 0 84px 54px rgba(4,18,12,var(--sa,.6))}
+.band.b4{--sa:.46}
+.band .btn{text-shadow:none}
+.chip{padding:7px 12px;background:rgba(6,26,18,.5);border:1px solid rgba(244,239,228,.28);border-radius:6px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);text-shadow:0 1px 3px rgba(4,18,12,.85)}
+.band .kicker{color:var(--on-emerald);opacity:clamp(0,var(--k,0)*3,1)}
+.bh{font-family:var(--f-display);font-weight:800;font-size:clamp(1.8rem,3.5vw,4rem);line-height:1.04;letter-spacing:-.03em;text-wrap:balance;max-width:24ch}
+.b1 .bh{font-size:clamp(2.4rem,5.2vw,5.6rem);line-height:1;max-width:none}
+.b4 .bh{font-size:clamp(2.4rem,5vw,5.4rem);line-height:1}
+.bh .w{display:inline-block;white-space:nowrap}
+.bh .wi{display:inline-block}
+.bh .em .wi{color:var(--sun)}
+.bsub{font-size:clamp(1rem,1.25vw,1.35rem);line-height:1.45;max-width:46ch;text-wrap:balance;--ks:clamp(0,(var(--k,0) - .55)*3,1);opacity:var(--ks);transform:translateY(calc((1 - var(--ks))*10px))}
+/* entrances, all transform and opacity, scrubbed off --k. Each one does to the words what the gate is doing */
+.fx-gate .w{--kc:clamp(0,(var(--k,0) - var(--th,0))*2.4,1);overflow:hidden;padding:.1em .05em .2em;margin:-.1em -.05em -.2em;vertical-align:top}
+.fx-gate .wi{transform:translateY(calc((1 - var(--kc))*120%))}
+.fx-sweep .w{--kc:clamp(0,(var(--k,0) - var(--th,0))*2.6,1)}
+.fx-sweep .wi{opacity:var(--kc);transform:translateX(calc((1 - var(--kc))*-28px))}
+.fx-slat .w{--kc:clamp(0,(var(--k,0) - var(--th,0))*3,1)}
+.fx-slat .wi{opacity:var(--kc);transform-origin:50% 100%;transform:scaleY(calc(.2 + .8*var(--kc)))}
+.fx-rise .w{--kc:clamp(0,(var(--k,0) - var(--th,0))*3,1)}
+.fx-rise .wi{opacity:var(--kc);transform:translateY(calc((1 - var(--kc))*.7em))}
+.settle-sub{--ks:clamp(0,(var(--k,0) - .66)*4,1)}
+.settle-cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 24px;--kb:clamp(0,(var(--k,0) - .78)*5,1);opacity:var(--kb);transform:translateY(calc((1 - var(--kb))*12px))}
+.ring{position:absolute;right:26px;bottom:26px;width:34px;height:34px;color:var(--emerald-ink);transform:rotate(-90deg);transition:opacity .6s var(--ease-out)}
+.ring circle{transition:stroke-dashoffset .2s linear}
+.stage.video-ready .ring,.stage.video-failed .ring{opacity:0}
+.stage.seq-loading .ring{opacity:1}
+.cue{position:absolute;left:50%;top:calc(var(--floor) - 72px);display:flex;flex-direction:column;align-items:center;gap:8px;margin-left:-110px;width:220px;font-family:var(--f-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;text-shadow:0 1px 3px rgba(4,18,12,.85);opacity:0}
+.cue svg{width:16px;height:22px;animation:cue 2.4s var(--ease-io) -1s infinite}
+@keyframes cue{0%,100%{transform:translateY(0);opacity:.5}50%{transform:translateY(7px);opacity:1}}
+@media (max-height:600px){.cue{display:none}.band-in{gap:10px}.b4 .bsub{display:none}}
+@media (max-height:500px){.band .kicker{display:none}}
+/* tall or narrow screens: the whole frame across the top, the words on the concrete below */
+@media (max-aspect-ratio: 29/20), (max-width: 860px){
+  .hero{background:var(--canvas)}
+  .stage{color:var(--text-primary);background:var(--canvas)}
+  .media{bottom:auto;height:var(--media-h)}
+  .poster,.poster-end{background-position:50% 56%}
+  .media video,.media canvas{object-position:50% 56%}
+  .scrim{background:linear-gradient(rgba(5,22,15,.62) 0%,rgba(5,22,15,0) 30%,rgba(236,228,216,0) 76%,var(--canvas) 100%)}
+  .stage::after{display:none}
+  .band,.band.b1{left:20px;right:20px;width:auto;margin:0;top:calc(var(--media-h) + 18px);height:auto;align-items:flex-start;justify-content:flex-start;text-align:left;text-shadow:none}
+  .band-in{align-items:flex-start;gap:12px}
+  .band-in::before{display:none}
+  .chip{background:var(--panel);border-color:var(--line-strong);backdrop-filter:none;-webkit-backdrop-filter:none;text-shadow:none}
+  .band .kicker{color:var(--emerald)}
+  .bh{font-size:clamp(1.7rem,7.2vw,2.8rem)}
+  .b1 .bh{font-size:clamp(2.1rem,9.4vw,3.6rem)}
+  .b4 .bh{font-size:clamp(2.2rem,10vw,3.8rem)}
+  .bh .em .wi{color:var(--emerald)}
+  .bsub{font-size:1rem;color:var(--text-secondary);max-width:36ch}
+  .b4 .bsub{display:block}
+  .settle-cta{justify-content:flex-start}
+  .band .btn.light{background:var(--emerald);color:var(--on-emerald)}
+  .band .btn.light:hover{background:var(--emerald-hover)}
+  .cue{display:none}
+  .ring{top:calc(var(--nav-h) + 14px);bottom:auto;right:18px;color:var(--on-emerald)}
+}
+@media (max-aspect-ratio: 29/20) and (min-height: 620px), (max-width: 860px) and (min-height: 620px){
+  .cue{display:flex;top:auto;bottom:26px;color:var(--text-secondary);text-shadow:none}
+}
+@media (max-width: 860px) and (max-height: 480px){
+  .band-in{gap:8px}
+  .band .kicker,.band .bsub,.b4 .bsub{display:none}
+}
+
+/* the composed static hero: a phone held sideways, and reduced motion */
+.hero-static{display:none;position:relative;min-height:100vh;min-height:100svh;color:var(--on-emerald);background:var(--emerald-deep)}
+.hs-media{position:absolute;top:0;right:0;bottom:0;left:0;background-size:cover;background-position:50% 8%}
+.hs-media::after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;background:linear-gradient(rgba(5,22,15,.58) 0%,rgba(5,22,15,.2) 15%,rgba(5,22,15,0) 30%),radial-gradient(ellipse 48% 26% at 50% 22%,rgba(4,18,12,.6),rgba(4,18,12,0))}
+.hs-copy{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px;width:min(92vw,1180px);margin-inline:auto;padding-top:var(--nav-h);height:calc(var(--roof) - 3vh);text-shadow:var(--tshadow)}
+.hs-copy .kicker{color:var(--on-emerald)}
+.hs-copy h1{font-weight:800;font-size:clamp(1.9rem,3.6vw,3.8rem);line-height:1.02;letter-spacing:-.03em}
+.hs-br{display:none}
+.hs-sub{font-size:1.05rem;line-height:1.45;max-width:60ch;text-wrap:balance}
+.hs-copy .btn{text-shadow:none;min-height:46px}
+@media (orientation: landscape) and (pointer: coarse) and (max-height: 560px), (prefers-reduced-motion: reduce){
+  .hero{height:auto}
+  .stage{display:none}
+  .hero-static{display:block}
+  .hs-media{background-image:url("assets/hero-ending.jpg")}
+}
+@media (max-height:600px){.hs-sub{display:none}}
+@media (max-aspect-ratio: 29/20), (max-width: 860px){
+  .hero-static{min-height:0;color:var(--text-primary);background:var(--canvas)}
+  .hs-media{position:relative;height:var(--media-h);background-position:50% 56%}
+  .hs-media::after{background:linear-gradient(rgba(5,22,15,.62) 0%,rgba(5,22,15,0) 30%,rgba(236,228,216,0) 76%,var(--canvas) 100%)}
+  .hs-copy{align-items:flex-start;text-align:left;width:auto;margin:0;height:auto;padding:14px 20px 48px;text-shadow:none}
+  .hs-copy .kicker{color:var(--emerald)}
+  .hs-copy h1{font-size:clamp(2.1rem,9.4vw,3.6rem);line-height:1}
+  .hs-br{display:inline}
+  .hs-sub{display:block;color:var(--text-secondary);max-width:36ch;font-size:1rem}
+  .hs-copy .btn.light{background:var(--emerald);color:var(--on-emerald)}
+}
+@media (max-width: 860px) and (max-height: 480px){
+  .hs-copy{gap:8px;padding-bottom:28px}
+  .hs-copy .kicker,.hs-sub{display:none}
+  .hs-copy h1{font-size:clamp(1.5rem,7.4vh,2.2rem)}
+}
+
+/* sections */
+.sec{position:relative;padding:clamp(84px,10vw,150px) 0;scroll-margin-top:calc(var(--nav-h) - 8px)}
+.sec-head{display:flex;flex-direction:column;gap:18px}
+.sec-head.row{flex-direction:row;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px 40px}
+.sec-head.row>div{display:flex;flex-direction:column;gap:18px}
+.sec-head.center{align-items:center;text-align:center}
+
+/* entrance choreography */
+.reveal .rv{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease-out),transform 1s var(--ease-out)}
+.reveal .rv.rv-left{transform:translateX(-34px)}
+.reveal .rv.rv-right{transform:translateX(34px)}
+.reveal .rv.rv-scale{transform:scale(.95)}
+.reveal.in .rv{opacity:1;transform:none}
+.reveal .rv:nth-child(2){transition-delay:.09s}
+.reveal .rv:nth-child(3){transition-delay:.18s}
+.reveal .rv:nth-child(4){transition-delay:.27s}
+.reveal .rv:nth-child(5){transition-delay:.36s}
+.reveal .rv:nth-child(6){transition-delay:.45s}
+.reveal.done .rv:nth-child(n){transition-delay:0s}
+
+/* o que fica aberto: three doors, each gate lifts as it scrolls in */
+.doors{display:flex;flex-direction:column;gap:14px;margin-top:clamp(40px,5vw,64px)}
+.door{position:relative;overflow:hidden;border-radius:12px;background:var(--panel);border:1px solid var(--line);--open:0;--show:clamp(0,(var(--open) - .34)*1.9,1)}
+.door-in{display:grid;grid-template-columns:72px minmax(0,5fr) minmax(0,7fr);align-items:baseline;gap:clamp(14px,3vw,48px);padding:clamp(28px,3.6vw,48px) clamp(22px,3.4vw,48px)}
+.door-in>*{opacity:var(--show);transform:translateY(calc((1 - var(--show))*16px))}
+.door .n{font-family:var(--f-mono);font-size:.85rem;font-weight:500;letter-spacing:.1em;color:var(--emerald)}
+.door h3{font-size:clamp(1.5rem,2.7vw,2.4rem);letter-spacing:-.03em;line-height:1.05}
+.door p{color:var(--text-secondary);max-width:46ch}
+.shutter{position:absolute;top:0;right:0;bottom:0;left:0;transform:translateY(calc(var(--open,0)*-101%))}
+.shutter::after{content:"";position:absolute;left:0;right:0;bottom:0;height:9px;background:#07241a}
+/* the slit of morning light under a gate that is on its way up */
+.shutter::before{content:"";position:absolute;left:0;right:0;top:100%;height:26px;background:linear-gradient(rgba(233,184,114,.62),rgba(233,184,114,0));opacity:calc(var(--open,0)*(1 - var(--open,0))*4)}
+.door .glow{position:absolute;left:8%;right:8%;top:0;height:2px;background:var(--sun);border-radius:2px;opacity:0;pointer-events:none}
+.live .door .glow{animation:slit 5.4s var(--ease-io) -1.6s infinite}
+.live .door:nth-child(2) .glow{animation-delay:-3.2s}
+.live .door:nth-child(3) .glow{animation-delay:-4.6s}
+@keyframes slit{0%,100%{opacity:0;transform:scaleX(.5)}50%{opacity:calc(var(--show)*.75);transform:scaleX(1)}}
+
+/* estoque */
+.cars{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(34px,4vw,56px) clamp(16px,2.2vw,30px);margin-top:clamp(40px,5vw,64px)}
+.car-fig{position:relative;border-radius:12px;overflow:hidden;aspect-ratio:4/3;background:var(--emerald-deep)}
+.car-fig img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease-out)}
+.car:hover .car-fig img{transform:scale(1.045)}
+.car-fig::after{content:"";position:absolute;top:-40%;bottom:-40%;left:-30%;width:26%;background:linear-gradient(90deg,rgba(255,244,220,0),rgba(255,244,220,.2),rgba(255,244,220,0));transform:translateX(-120%) rotate(14deg);pointer-events:none}
+.live .car-fig::after{animation:sheen 9s var(--ease-io) -2s infinite}
+.live .car:nth-child(2) .car-fig::after{animation-delay:-4.2s}
+.live .car:nth-child(3) .car-fig::after{animation-delay:-6.4s}
+.live .car:nth-child(4) .car-fig::after{animation-delay:-8.1s}
+@keyframes sheen{0%,62%{transform:translateX(-120%) rotate(14deg)}100%{transform:translateX(620%) rotate(14deg)}}
+.car-n{position:absolute;left:14px;top:14px;z-index:1;font-family:var(--f-mono);font-size:.8rem;font-weight:500;letter-spacing:.1em;color:var(--on-emerald);padding:6px 10px;background:rgba(6,26,18,.55);border:1px solid rgba(244,239,228,.3);border-radius:6px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.car-txt{display:flex;align-items:flex-end;justify-content:space-between;gap:10px 24px;flex-wrap:wrap;margin-top:20px}
+.car h3{font-size:clamp(1.5rem,2.4vw,2rem);letter-spacing:-.03em}
+.car p{margin-top:6px;color:var(--text-secondary);max-width:34ch}
+.car .link{color:var(--emerald);white-space:nowrap}
+.estoque .fine{margin-top:clamp(30px,4vw,48px);padding-top:18px;border-top:1px solid var(--line);max-width:none}
+
+/* o laudo: the one interactive moment. Hold the button, the gate over the record goes up */
+.laudo{background:var(--panel-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.laudo-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,6vw,96px);align-items:center;--hp:0}
+.laudo-txt{display:flex;flex-direction:column;align-items:flex-start;gap:20px}
+.laudo-txt h2{max-width:13ch}
+.hold-btn{position:relative;overflow:hidden;min-height:58px;margin-top:8px;padding:0 30px;border-radius:8px;border:2px solid var(--emerald);background:transparent;color:var(--text-primary);font:600 1.02rem/1 var(--f-body);cursor:pointer;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;touch-action:manipulation;transition:transform .35s var(--ease-out),color .4s var(--ease-out)}
+/* a transform-only wipe: the green window slides in from the left while its cream label stays put */
+.hold-btn .fill{position:absolute;top:0;right:0;bottom:0;left:0;z-index:1;background:var(--emerald);overflow:hidden;transform:translateX(calc((var(--hp) - 1)*100%))}
+.hold-btn .fill-in{position:absolute;top:0;right:0;bottom:0;left:0;display:flex;align-items:center;justify-content:center;color:var(--on-emerald);transform:translateX(calc((1 - var(--hp))*100%))}
+.hold-btn .lbl{position:relative}
+.hold-btn::after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;border-radius:6px;box-shadow:inset 0 0 0 3px var(--emerald);opacity:0;pointer-events:none}
+.live .hold:not(.done):not(.holding) .hold-btn::after{animation:pulse 4.2s var(--ease-io) -1.2s infinite}
+@keyframes pulse{0%,100%{opacity:0}50%{opacity:.55}}
+.hold.holding .hold-btn{transform:scale(.97)}
+.hold.done .hold-btn{cursor:default}
+.hold-msg{min-height:1.5em;font-family:var(--f-display);font-weight:800;font-size:clamp(1.1rem,1.6vw,1.35rem);line-height:1.25;letter-spacing:-.015em;max-width:26ch;opacity:0;transform:translateY(8px);transition:opacity .8s var(--ease-out) 1.1s,transform .8s var(--ease-out) 1.1s}
+.hold-msg.on{opacity:1;transform:none}
+.ficha{background:var(--panel);border:1px solid var(--line-strong);border-radius:14px;overflow:hidden;box-shadow:0 30px 60px -34px rgba(16,35,27,.5)}
+.ficha-head{display:flex;align-items:center;gap:16px;padding:16px 18px;border-bottom:1px solid var(--line)}
+.ficha-head img{flex:none;width:108px;height:80px;border-radius:8px;object-fit:cover}
+.ficha-head div{display:flex;flex-direction:column;gap:6px}
+.ficha-car{font-family:var(--f-display);font-weight:800;font-size:clamp(1.05rem,1.5vw,1.3rem);letter-spacing:-.015em;line-height:1.2}
+.ficha-body{position:relative;overflow:hidden}
+.read{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:16px;padding:17px 20px;border-top:1px solid var(--line)}
+.read:first-child{border-top:0}
+.read dt{font-family:var(--f-mono);font-size:.78rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--text-secondary)}
+.read dd{display:flex;align-items:center;gap:12px;font-family:var(--f-display);font-weight:800;font-size:clamp(1.05rem,1.6vw,1.3rem);letter-spacing:-.015em;line-height:1.1}
+.read dd::after{content:"";flex:none;width:16px;height:8px;margin-top:-5px;border-left:2.5px solid var(--emerald);border-bottom:2.5px solid var(--emerald);transform:rotate(-45deg) scale(0);opacity:0;transition:transform .6s var(--ease-out),opacity .6s var(--ease-out)}
+.hold.done .read dd::after{transform:rotate(-45deg) scale(1);opacity:1}
+.hold.done .read:nth-child(5) dd::after{transition-delay:.1s}
+.hold.done .read:nth-child(4) dd::after{transition-delay:.3s}
+.hold.done .read:nth-child(3) dd::after{transition-delay:.5s}
+.hold.done .read:nth-child(2) dd::after{transition-delay:.7s}
+.hold.done .read:nth-child(1) dd::after{transition-delay:.9s}
+.ficha .shutter{transform:translateY(calc(var(--hp,0)*-101%))}
+.ficha .shutter::before{opacity:calc(var(--hp,0)*(1 - var(--hp,0))*4)}
+
+/* como e a compra: four steps along a rail that draws itself */
+.steps{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(18px,2.6vw,40px);margin-top:clamp(44px,5.4vw,72px);padding-top:46px;--draw:0}
+.steps::before,.steps::after{content:"";position:absolute;left:0;right:0;top:8px;height:2px;border-radius:2px}
+.steps::before{background:var(--line)}
+.steps::after{background:var(--emerald);transform:scaleX(var(--draw));transform-origin:left}
+.step{position:relative}
+.step .dot{position:absolute;left:0;top:-46px;width:18px;height:18px;border-radius:50%;background:var(--canvas);border:2px solid var(--line-strong);z-index:1;transition:background-color .6s var(--ease-out),border-color .6s var(--ease-out),transform .6s var(--ease-out)}
+.step.on .dot{background:var(--emerald);border-color:var(--emerald);transform:scale(1.12)}
+.step .dot::after{content:"";position:absolute;top:-8px;right:-8px;bottom:-8px;left:-8px;border-radius:50%;box-shadow:0 0 0 2px var(--emerald);opacity:0}
+.live .step.on:last-child .dot::after{animation:pulse 4.6s var(--ease-io) -1s infinite}
+.step .n,.step h3,.step p{opacity:.3;transform:translateY(10px);transition:opacity .8s var(--ease-out),transform .8s var(--ease-out)}
+.step.on .n,.step.on h3,.step.on p{opacity:1;transform:none}
+.step .n{display:block;font-family:var(--f-mono);font-size:.85rem;font-weight:500;letter-spacing:.1em;color:var(--emerald)}
+.step h3{margin-top:10px;font-size:clamp(1.3rem,2vw,1.7rem);letter-spacing:-.025em}
+.step p{margin-top:10px;color:var(--text-secondary);max-width:30ch}
+
+/* quem comprou */
+.quem-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(18px,2.4vw,32px);align-items:stretch}
+.quem-side{display:flex;flex-direction:column;gap:clamp(16px,2vw,24px)}
+.quem-side .sec-head{margin-bottom:clamp(8px,1.4vw,20px)}
+.quote{position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:22px;padding:clamp(22px,2.6vw,32px);background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.quote blockquote p{font-size:1.08rem;line-height:1.5}
+.quote figcaption{font-family:var(--f-mono);font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-secondary)}
+.quote.big{order:-1;justify-content:flex-end;gap:30px;padding:clamp(28px,4vw,56px);padding-top:clamp(72px,8vw,120px);background:var(--emerald-deep);border-color:var(--emerald-deep);color:var(--on-emerald);overflow:hidden}
+.quote.big .roll{position:absolute;left:0;right:0;top:0;height:44px}
+.quote.big .roll::after{content:"";position:absolute;left:0;right:0;top:100%;height:2px;background:var(--sun);opacity:.2}
+.live .quote.big .roll::after{animation:beam 6s var(--ease-io) -2s infinite}
+@keyframes beam{0%,100%{opacity:.2}50%{opacity:.9}}
+.quote.big blockquote p{font-family:var(--f-display);font-weight:800;font-size:clamp(1.6rem,3.5vw,3.2rem);line-height:1.08;letter-spacing:-.035em}
+.quote.big figcaption{color:var(--on-emerald-2)}
+
+/* duvidas */
+.duvidas-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:start}
+.duvidas .sec-head{position:sticky;top:calc(var(--nav-h) + 40px)}
+.duvidas .sec-head h2{max-width:12ch}
+.faq details{border-top:1px solid var(--line-strong)}
+.faq details:last-child{border-bottom:1px solid var(--line-strong)}
+.faq summary{display:grid;grid-template-columns:36px minmax(0,1fr) 16px;align-items:center;gap:14px;padding:22px 0;cursor:pointer;list-style:none;font-family:var(--f-display);font-weight:800;font-size:1.16rem;line-height:1.25;letter-spacing:-.015em}
+.faq summary::-webkit-details-marker{display:none}
+.faq .q-n{font-family:var(--f-mono);font-size:.8rem;font-weight:500;letter-spacing:.06em;color:var(--emerald)}
+.pm{position:relative;width:16px;height:16px;color:var(--emerald)}
+.pm::before,.pm::after{content:"";position:absolute;left:0;right:0;top:7px;height:2px;background:currentColor;transition:transform .45s var(--ease-out)}
+.pm::after{transform:rotate(90deg)}
+details[open] .pm::after{transform:rotate(0deg)}
+.faq .a{padding:0 30px 24px 50px;color:var(--text-secondary);max-width:60ch}
+details[open] .a{animation:faqIn .5s var(--ease-out)}
+@keyframes faqIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.faq summary .q-t{transition:transform .45s var(--ease-out)}
+.faq summary:hover .q-t{transform:translateX(4px)}
+
+/* visita: inside the store. The rolled gate sits above the doorway */
+.visita{background:var(--emerald-deep);color:var(--on-emerald);padding-top:clamp(110px,12vw,180px)}
+.gate-top{position:absolute;left:0;right:0;top:0;height:clamp(44px,5vw,64px)}
+.gate-top::after{content:"";position:absolute;left:0;right:0;top:100%;height:3px;background:var(--sun);opacity:.3}
+.live .gate-top::after{animation:beam 7s var(--ease-io) -3s infinite}
+.visita .kicker{color:var(--on-emerald-2)}
+.visita .lede{color:var(--on-emerald-2)}
+.visita-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(36px,6vw,96px);align-items:start}
+.visita-info{display:flex;flex-direction:column;gap:22px}
+.visita-fig{margin-top:8px;border-radius:12px;overflow:hidden;border:1px solid rgba(244,239,228,.2);aspect-ratio:16/8.4}
+.visita-fig img{width:100%;height:100%;object-fit:cover;object-position:50% 46%}
+.hours{display:flex;flex-direction:column;border-top:1px solid rgba(244,239,228,.2)}
+.hours div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:14px 0;border-bottom:1px solid rgba(244,239,228,.2)}
+.hours dt{font-family:var(--f-mono);font-size:.78rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--on-emerald-2)}
+.hours dd{font-weight:600}
+.form{display:flex;flex-direction:column;gap:20px;padding:clamp(22px,3vw,38px);background:var(--panel);color:var(--text-primary);border-radius:14px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field label,.field legend{font-size:.92rem;font-weight:600;padding:0}
+fieldset.field{border:0;margin:0;padding:0;min-width:0}
+.field input[type=text],.field input[type=tel]{width:100%;min-height:50px;padding:12px 16px;background:#fffdf8;color:var(--text-primary);border:1px solid var(--line-strong);border-radius:8px;font:inherit;transition:border-color .35s var(--ease-out),box-shadow .35s var(--ease-out)}
+.field ::placeholder{color:#6b756d}
+.field input[type=text]:focus,.field input[type=tel]:focus{outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px var(--accent-muted)}
+.field.bad input{border-color:#a3401f}
+.err{font-size:.875rem;color:#8c3418;min-height:0}
+.radios{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.radios label,.check{position:relative;cursor:pointer}
+.radios input,.check input{position:absolute;opacity:0;top:0;right:0;bottom:0;left:0;width:100%;height:100%;margin:0;cursor:pointer}
+.radios span{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid var(--line-strong);border-radius:8px;font-weight:500;background:#fffdf8;transition:background-color .35s var(--ease-out),border-color .35s var(--ease-out),color .35s var(--ease-out)}
+.radios input:checked+span{background:var(--emerald);border-color:var(--emerald);color:var(--on-emerald)}
+.radios input:focus-visible+span,.check input:focus-visible+span{outline:2px solid var(--emerald);outline-offset:3px}
+.check{display:inline-flex;align-items:center;align-self:flex-start;min-height:44px}
+.check span{display:inline-flex;align-items:center;gap:12px;font-weight:500;border-radius:6px}
+.check span::before{content:"";flex:none;width:22px;height:22px;border:1px solid var(--line-strong);border-radius:6px;background:#fffdf8;transition:background-color .3s var(--ease-out),border-color .3s var(--ease-out)}
+.check span::after{content:"";position:absolute;left:6px;top:50%;width:10px;height:5px;margin-top:-5px;border-left:2px solid var(--on-emerald);border-bottom:2px solid var(--on-emerald);transform:rotate(-45deg) scale(0);transition:transform .35s var(--ease-out)}
+.check input:checked+span::before{background:var(--emerald);border-color:var(--emerald)}
+.check input:checked+span::after{transform:rotate(-45deg) scale(1)}
+.form .btn{align-self:flex-start}
+.form-note{font-size:.9rem;color:var(--text-secondary)}
+.form-ok{display:none;padding:16px 18px;border:1px solid var(--emerald);border-radius:10px;background:#e7efe6}
+.form-ok.on{display:block;animation:faqIn .6s var(--ease-out)}
+.form-ok p:first-child{font-weight:600}
+.form-ok p+p{margin-top:6px;color:var(--text-secondary);font-size:.95rem}
+
+/* footer */
+.foot{background:#0b261b;color:var(--on-emerald-2);padding:52px 0 44px}
+.foot-in{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px 48px;align-items:center}
+.foot .brand{color:var(--on-emerald)}
+.foot-meta{font-size:.95rem;text-align:right}
+.foot-small{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding-top:24px;border-top:1px solid rgba(244,239,228,.16);font-size:.85rem}
+
+/* responsive */
+@media (max-width:900px){
+  .door-in{grid-template-columns:minmax(0,1fr);gap:10px}
+  .laudo-grid,.quem-grid,.duvidas-grid,.visita-grid{grid-template-columns:minmax(0,1fr)}
+  .duvidas .sec-head{position:static}
+  .duvidas .sec-head h2,.laudo-txt h2{max-width:17ch}
+  .quote.big{order:0}
+  .steps{grid-template-columns:minmax(0,1fr);gap:34px;padding-top:0;padding-left:44px}
+  .steps::before,.steps::after{left:8px;right:auto;top:0;bottom:0;width:2px;height:auto}
+  .steps::after{transform:scaleY(var(--draw));transform-origin:top}
+  .step .dot{left:-44px;top:2px}
+  .foot-in{grid-template-columns:minmax(0,1fr)}
+  .foot-meta{text-align:left}
+}
+@media (max-width:680px){
+  .cars{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:520px){
+  .hold-btn,.form .btn{align-self:stretch}
+  .faq summary{grid-template-columns:28px minmax(0,1fr) 16px;gap:10px;font-size:1.05rem}
+  .faq .a{padding-left:38px;padding-right:8px}
+  .ficha-head img{width:84px;height:64px}
+  .read{padding:15px 16px}
+}
+@media (pointer:coarse){
+  .btn,.hold-btn{min-height:50px;display:inline-flex;align-items:center;justify-content:center}
+  .nav .btn{min-height:44px}
+  .link{min-height:44px;display:inline-flex;align-items:center}
+  .faq summary{min-height:56px}
+}
+
+/* reduced motion: everything in its finished state, nothing moving */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none !important;transition:none !important;transition-delay:0s !important}
+  .reveal .rv,.reveal .rv.rv-left,.reveal .rv.rv-right,.reveal .rv.rv-scale{opacity:1;transform:none}
+  .step .n,.step h3,.step p{opacity:1;transform:none}
+  .mote{display:none}
+  .hold-msg{opacity:1;transform:none}
+}
+</style>
+<noscript><style>
+.hero{height:auto}.stage{display:none}
+.hero-static{display:block}.hs-media{background-image:url("assets/hero-ending.jpg")}
+.reveal .rv{opacity:1;transform:none}
+.shutter{display:none}.door{--open:1}
+.steps{--draw:1}.step .n,.step h3,.step p{opacity:1;transform:none}
+.hold-btn{display:none}
+</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+<div class="env" aria-hidden="true"></div>
+
+<nav class="nav" aria-label="Principal">
+  <div class="nav-in">
+    <a class="brand" href="#topo" aria-label="Às Claras, voltar ao início">
+      <svg viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M3.5 26V5.5a2 2 0 0 1 2-2h17a2 2 0 0 1 2 2V26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M7.5 7.4h13v2.8h-13zM7.5 11.6h13v2.8h-13z" fill="currentColor"/><path d="M7.5 17.8h13" stroke="#e9b872" stroke-width="2.2" stroke-linecap="round"/></svg>
+      <b>Às Claras</b>
+    </a>
+    <div class="nav-links">
+      <a class="link" href="#aberto">O que fica aberto</a>
+      <a class="link" href="#estoque">Estoque</a>
+      <a class="link" href="#laudo">O laudo</a>
+      <a class="link" href="#como">Como é a compra</a>
+      <a class="link" href="#duvidas">Dúvidas</a>
+      <a class="btn" href="#visita">Agendar uma visita</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main" tabindex="-1">
+
+<section class="hero" id="topo" aria-label="Abertura">
+  <div class="stage">
+    <div class="media" aria-hidden="true">
+      <div class="poster"></div>
+      <div class="poster-end"></div>
+      <video id="heroVideo" preload="none" muted playsinline disablepictureinpicture disableremoteplayback tabindex="-1"></video>
+      <canvas id="heroCanvas" width="1024" height="576"></canvas>
+      <div class="scrim"></div>
+    </div>
+
+    <div class="band b1 fx-gate" data-a="0" data-b="0.19"><div class="band-in">
+      <p class="kicker chip">Às Claras · Multimarcas</p>
+      <h1 class="bh" data-split="gate" data-seed="11" data-break="usado,">Carro usado, sem nada escondido.</h1>
+      <p class="bsub">Uma loja multimarcas que abre tudo antes de você perguntar.</p>
+    </div></div>
+
+    <div class="band b2 fx-sweep" data-a="0.215" data-b="0.43" data-ramp="0.04"><div class="band-in">
+      <p class="kicker chip">O passado do carro</p>
+      <p class="bh" data-split="sweep" data-seed="23">Laudo na sua mão antes de falar de preço.</p>
+    </div></div>
+
+    <div class="band b3 fx-slat" data-a="0.45" data-b="0.7" data-ramp="0.04"><div class="band-in">
+      <p class="kicker chip">A conta</p>
+      <p class="bh" data-split="slat" data-seed="37">O preço do anúncio é o preço final.</p>
+    </div></div>
+
+    <div class="band b4 fx-rise" data-a="0.75" data-b="1" data-ramp="0.06"><div class="band-in">
+      <p class="bh" data-split="rise" data-seed="41" data-em="às claras.">Tudo às claras.</p>
+      <p class="bsub settle-sub">Do primeiro carro à picape. Todos com laudo, garantia por escrito e conta aberta.</p>
+      <div class="settle-cta">
+        <a class="btn light" href="#visita">Agendar uma visita</a>
+        <a class="link" href="#estoque">Ver o estoque</a>
+      </div>
+    </div></div>
+
+    <svg class="ring" viewBox="0 0 48 48" aria-hidden="true">
+      <circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-dasharray="126" style="stroke-dashoffset:var(--ld,126)"/>
+    </svg>
+    <div class="cue" aria-hidden="true">
+      <span>Role para abrir a loja</span>
+      <svg viewBox="0 0 16 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1v19M2 14l6 6 6-6"/></svg>
+    </div>
+  </div>
+
+  <div class="hero-static">
+    <div class="hs-media" aria-hidden="true"></div>
+    <div class="hs-copy">
+      <p class="kicker chip">Às Claras · Multimarcas</p>
+      <h1>Carro usado, <br class="hs-br">sem nada escondido.</h1>
+      <p class="hs-sub">Multimarcas com laudo na mão, preço final no anúncio e avaliação justa do seu usado.</p>
+      <a class="btn light" href="#visita">Agendar uma visita</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec aberto reveal" id="aberto" aria-labelledby="h-aberto">
+  <div class="wrap">
+    <div class="sec-head center">
+      <p class="kicker rv">Às claras</p>
+      <h2 class="rv" id="h-aberto">Três coisas que outras lojas deixam fechadas.</h2>
+      <p class="lede rv">Aqui elas ficam abertas, antes de você perguntar.</p>
+    </div>
+    <ol class="doors" id="doors">
+      <li class="door">
+        <div class="door-in">
+          <span class="n" aria-hidden="true">01</span>
+          <h3>O passado do carro</h3>
+          <p>Laudo cautelar de todo carro do pátio. Quilometragem conferida, sem leilão, sem sinistro. Na sua mão antes de falar de preço.</p>
+        </div>
+        <span class="glow" aria-hidden="true"></span>
+        <div class="shutter slats" aria-hidden="true"></div>
+      </li>
+      <li class="door">
+        <div class="door-in">
+          <span class="n" aria-hidden="true">02</span>
+          <h3>O preço</h3>
+          <p>O valor do anúncio é o valor final. Transferência e taxas já aparecem na conta. Nada surge no dia da entrega.</p>
+        </div>
+        <span class="glow" aria-hidden="true"></span>
+        <div class="shutter slats" aria-hidden="true"></div>
+      </li>
+      <li class="door">
+        <div class="door-in">
+          <span class="n" aria-hidden="true">03</span>
+          <h3>A troca</h3>
+          <p>Seu usado é avaliado na sua frente, com a tabela Fipe na tela. Você sai com o valor por escrito, comprando ou não.</p>
+        </div>
+        <span class="glow" aria-hidden="true"></span>
+        <div class="shutter slats" aria-hidden="true"></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec estoque reveal" id="estoque" aria-labelledby="h-estoque">
+  <div class="wrap">
+    <div class="sec-head row">
+      <div class="rv">
+        <p class="kicker">Estoque</p>
+        <h2 id="h-estoque">Do primeiro carro à picape.</h2>
+      </div>
+      <p class="lede rv">Várias marcas, um padrão só. Todo carro entra no pátio com laudo aprovado.</p>
+    </div>
+    <ul class="cars">
+      <li class="car rv">
+        <figure class="car-fig">
+          <span class="car-n" aria-hidden="true">01</span>
+          <img src="assets/hatch.jpg" width="1600" height="1194" loading="lazy" decoding="async" alt="Hatch branco no showroom, em frente à parede verde">
+        </figure>
+        <div class="car-txt">
+          <div>
+            <h3>Hatch</h3>
+            <p>Para a cidade e para o primeiro carro.</p>
+          </div>
+          <a class="link" href="#visita" data-tipo="Hatch">Quero ver um hatch</a>
+        </div>
+      </li>
+      <li class="car rv">
+        <figure class="car-fig">
+          <span class="car-n" aria-hidden="true">02</span>
+          <img src="assets/sedan.jpg" width="1600" height="1194" loading="lazy" decoding="async" alt="Sedã cinza no showroom, em frente à parede verde">
+        </figure>
+        <div class="car-txt">
+          <div>
+            <h3>Sedã</h3>
+            <p>Para a família e para a estrada.</p>
+          </div>
+          <a class="link" href="#visita" data-tipo="Sedã">Quero ver um sedã</a>
+        </div>
+      </li>
+      <li class="car rv">
+        <figure class="car-fig">
+          <span class="car-n" aria-hidden="true">03</span>
+          <img src="assets/suv.jpg" width="1600" height="1194" loading="lazy" decoding="async" alt="SUV prata no showroom, em frente à parede verde">
+        </figure>
+        <div class="car-txt">
+          <div>
+            <h3>SUV</h3>
+            <p>Para quem quer espaço e posição alta.</p>
+          </div>
+          <a class="link" href="#visita" data-tipo="SUV">Quero ver um SUV</a>
+        </div>
+      </li>
+      <li class="car rv">
+        <figure class="car-fig">
+          <span class="car-n" aria-hidden="true">04</span>
+          <img src="assets/picape.jpg" width="1600" height="1194" loading="lazy" decoding="async" alt="Picape azul no showroom, em frente à parede verde">
+        </figure>
+        <div class="car-txt">
+          <div>
+            <h3>Picape</h3>
+            <p>Para o trabalho e para a terra.</p>
+          </div>
+          <a class="link" href="#visita" data-tipo="Picape">Quero ver uma picape</a>
+        </div>
+      </li>
+    </ul>
+    <p class="fine rv">O carro do anúncio é o carro que está no pátio. Vendeu, sai do site no mesmo dia.</p>
+  </div>
+</section>
+
+<section class="sec laudo reveal" id="laudo" aria-labelledby="h-laudo">
+  <div class="wrap laudo-grid hold" id="hold">
+    <div class="laudo-txt">
+      <p class="kicker rv">O laudo</p>
+      <h2 class="rv" id="h-laudo">Segure o botão. O portão sobe.</h2>
+      <p class="lede rv">Aperte e segure para ver o que existe por trás de um carro do nosso pátio.</p>
+      <button class="hold-btn rv" type="button"><span class="fill" aria-hidden="true"><span class="fill-in">Segure para abrir</span></span><span class="lbl">Segure para abrir</span></button>
+      <p class="hold-msg" id="hold-msg" aria-live="polite"></p>
+    </div>
+    <div class="ficha rv rv-right">
+      <div class="ficha-head">
+        <img src="assets/suv.jpg" width="1600" height="1194" loading="lazy" decoding="async" alt="">
+        <div>
+          <p class="kicker">Exemplo de ficha</p>
+          <p class="ficha-car">SUV prata · 2021 · 48.200 km</p>
+        </div>
+      </div>
+      <div class="ficha-body">
+        <dl class="reads">
+          <div class="read"><dt>Quilometragem</dt><dd>Conferida.</dd></div>
+          <div class="read"><dt>Leilão</dt><dd>Nunca passou.</dd></div>
+          <div class="read"><dt>Sinistro</dt><dd>Sem registro.</dd></div>
+          <div class="read"><dt>Multas e débitos</dt><dd>Zerados.</dd></div>
+          <div class="read"><dt>Estrutura</dt><dd>Original.</dd></div>
+        </dl>
+        <div class="shutter slats" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec como reveal" id="como" aria-labelledby="h-como">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker rv">Como é a compra</p>
+      <h2 class="rv" id="h-como">Quatro passos. Nenhum no escuro.</h2>
+    </div>
+    <ol class="steps" id="steps">
+      <li class="step">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="n" aria-hidden="true">01</span>
+        <h3>Você escolhe</h3>
+        <p>Veja o estoque no site ou no pátio. É o mesmo.</p>
+      </li>
+      <li class="step">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="n" aria-hidden="true">02</span>
+        <h3>Você confere</h3>
+        <p>Laudo na mão e test drive sem pressa. Quer trazer seu mecânico? Traga.</p>
+      </li>
+      <li class="step">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="n" aria-hidden="true">03</span>
+        <h3>A conta aberta</h3>
+        <p>Preço final, valor do seu usado e parcela na mesma tela. Você vê tudo antes de decidir.</p>
+      </li>
+      <li class="step">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="n" aria-hidden="true">04</span>
+        <h3>Você leva</h3>
+        <p>A gente cuida da transferência. O carro sai com garantia por escrito.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec quem reveal" id="quem" aria-labelledby="h-quem">
+  <div class="wrap quem-grid">
+    <div class="quem-side">
+      <div class="sec-head rv">
+        <p class="kicker">Quem comprou</p>
+        <h2 id="h-quem">O que muda quando a loja mostra tudo.</h2>
+      </div>
+      <figure class="quote rv">
+        <blockquote><p>“Avaliaram meu carro na minha frente e explicaram cada desconto. Não era o valor que eu sonhava, mas era justo.”</p></blockquote>
+        <figcaption>Jonas, deu um sedã na troca</figcaption>
+      </figure>
+      <figure class="quote rv">
+        <blockquote><p>“Levei meu mecânico. Ninguém fez cara feia.”</p></blockquote>
+        <figcaption>Lúcia, comprou um hatch</figcaption>
+      </figure>
+      <p class="fine rv">Depoimentos ilustrativos.</p>
+    </div>
+    <figure class="quote big rv rv-left">
+      <span class="roll slats" aria-hidden="true"></span>
+      <blockquote><p>“Eu já tinha desistido de duas lojas. Aqui o vendedor me entregou o laudo antes de eu pedir. Fechei no mesmo dia.”</p></blockquote>
+      <figcaption>Carla, comprou um SUV</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec duvidas reveal" id="duvidas" aria-labelledby="h-duvidas">
+  <div class="wrap duvidas-grid">
+    <div class="sec-head">
+      <p class="kicker rv">Dúvidas</p>
+      <h2 class="rv" id="h-duvidas">Pergunte tudo. A resposta vem por escrito.</h2>
+    </div>
+    <div class="faq rv">
+      <details>
+        <summary><span class="q-n" aria-hidden="true">01</span><span class="q-t">O carro já passou por leilão ou teve batida forte?</span><span class="pm" aria-hidden="true"></span></summary>
+        <p class="a">Não. A gente não compra carro de leilão nem com dano de estrutura. E você não precisa acreditar na gente: o laudo de cada carro fica na sua mão antes de falar de preço.</p>
+      </details>
+      <details>
+        <summary><span class="q-n" aria-hidden="true">02</span><span class="q-t">A quilometragem é real?</span><span class="pm" aria-hidden="true"></span></summary>
+        <p class="a">É conferida no laudo e no histórico de revisões. Carro que a gente não consegue comprovar não entra no pátio.</p>
+      </details>
+      <details>
+        <summary><span class="q-n" aria-hidden="true">03</span><span class="q-t">Posso levar meu mecânico?</span><span class="pm" aria-hidden="true"></span></summary>
+        <p class="a">Pode e deve. Traga quem você confia, ou leve o carro até a oficina dele.</p>
+      </details>
+      <details>
+        <summary><span class="q-n" aria-hidden="true">04</span><span class="q-t">Quanto vocês pagam no meu usado?</span><span class="pm" aria-hidden="true"></span></summary>
+        <p class="a">A avaliação é feita na sua frente, com a tabela Fipe na tela e o motivo de cada desconto. Você sai com o valor por escrito, comprando ou não.</p>
+      </details>
+      <details>
+        <summary><span class="q-n" aria-hidden="true">05</span><span class="q-t">O preço do anúncio é o preço final?</span><span class="pm" aria-hidden="true"></span></summary>
+        <p class="a">É. Transferência e taxas aparecem na conta antes de você assinar. Nada surge no dia da entrega.</p>
+      </details>
+      <details>
+        <summary><span class="q-n" aria-hidden="true">06</span><span class="q-t">E se der problema depois da compra?</span><span class="pm" aria-hidden="true"></span></summary>
+        <p class="a">Todo carro sai com garantia por escrito de motor e câmbio. Deu problema, você fala com a mesma pessoa que te vendeu.</p>
+      </details>
+      <details>
+        <summary><span class="q-n" aria-hidden="true">07</span><span class="q-t">Vocês financiam?</span><span class="pm" aria-hidden="true"></span></summary>
+        <p class="a">Sim, com vários bancos. Você vê a parcela, a taxa e o custo total lado a lado e escolhe com calma.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="sec visita reveal" id="visita" aria-labelledby="h-visita">
+  <div class="gate-top slats" aria-hidden="true"></div>
+  <div class="wrap visita-grid">
+    <div class="visita-info">
+      <p class="kicker rv">Visita</p>
+      <h2 class="rv" id="h-visita">Venha ver de perto. O portão está aberto.</h2>
+      <p class="lede rv">Escolha um horário, veja o carro com calma e leve o laudo para casa, comprando ou não.</p>
+      <figure class="visita-fig rv">
+        <img src="assets/hero-ending.jpg" width="1920" height="1080" loading="lazy" decoding="async" alt="A loja aberta, com quatro carros lado a lado em frente à parede verde">
+      </figure>
+      <dl class="hours rv">
+        <div><dt>Segunda a sexta</dt><dd>8h às 18h</dd></div>
+        <div><dt>Sábado</dt><dd>8h às 13h</dd></div>
+      </dl>
+    </div>
+    <form class="form rv rv-right" id="form" novalidate>
+      <div class="field" id="f-nome">
+        <label for="nome">Seu nome</label>
+        <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Como você se chama" aria-describedby="e-nome">
+        <p class="err" id="e-nome" aria-live="polite"></p>
+      </div>
+      <div class="field" id="f-tel">
+        <label for="tel">Seu WhatsApp</label>
+        <input type="tel" id="tel" name="tel" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000" aria-describedby="e-tel">
+        <p class="err" id="e-tel" aria-live="polite"></p>
+      </div>
+      <fieldset class="field">
+        <legend>O que você procura</legend>
+        <div class="radios">
+          <label><input type="radio" name="procura" value="Hatch"><span>Hatch</span></label>
+          <label><input type="radio" name="procura" value="Sedã"><span>Sedã</span></label>
+          <label><input type="radio" name="procura" value="SUV"><span>SUV</span></label>
+          <label><input type="radio" name="procura" value="Picape"><span>Picape</span></label>
+          <label><input type="radio" name="procura" value="Ainda não sei" checked><span>Ainda não sei</span></label>
+        </div>
+      </fieldset>
+      <label class="check"><input type="checkbox" name="troca"><span>Tenho um carro para dar na troca</span></label>
+      <button class="btn" type="submit">Agendar minha visita</button>
+      <p class="form-note">A gente responde no mesmo dia para combinar o horário.</p>
+      <div class="form-ok" id="form-ok" role="status">
+        <p>Pedido anotado.</p>
+        <p>Este é um site de demonstração, então nada foi enviado de verdade. Num site no ar, a Às Claras chamaria você no WhatsApp ainda hoje.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <a class="brand" href="#topo" aria-label="Às Claras, voltar ao início">
+      <svg viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M3.5 26V5.5a2 2 0 0 1 2-2h17a2 2 0 0 1 2 2V26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M7.5 7.4h13v2.8h-13zM7.5 11.6h13v2.8h-13z" fill="currentColor"/><path d="M7.5 17.8h13" stroke="#e9b872" stroke-width="2.2" stroke-linecap="round"/></svg>
+      <b>Às Claras · Multimarcas</b>
+    </a>
+    <p class="foot-meta">Segunda a sexta, 8h às 18h · Sábado, 8h às 13h</p>
+    <div class="foot-small">
+      <p>Às Claras é uma marca fictícia, criada para demonstração. Imagens geradas por inteligência artificial.</p>
+      <p>© 2026 Às Claras</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => {
+'use strict';
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const clamp = (v, lo, hi) => Math.min(hi, Math.max(lo, v));
+const smoothstep = (p, e0, e1) => { const t = clamp((p - e0) / (e1 - e0), 0, 1); return t * t * (3 - 2 * t); };
+const RM = matchMedia('(prefers-reduced-motion: reduce)');
+const COARSE = matchMedia('(pointer: coarse)');
+const SPLIT = matchMedia('(max-aspect-ratio: 29/20), (max-width: 860px)');
+const STACKED = matchMedia('(max-width: 900px)');
+/* old Safari only knows addListener */
+const onMQ = (m, fn) => { if (m.addEventListener) m.addEventListener('change', fn); else m.addListener(fn); };
+
+/* ---------- text splitting, seeded so every load is identical ---------- */
+function rng(seed) { let s = seed >>> 0; return () => (s = (s * 1664525 + 1013904223) >>> 0) / 4294967296; }
+function splitText(el) {
+  const mode = el.dataset.split;
+  const em = (el.dataset.em || '').split(' ').filter(Boolean);
+  const text = el.textContent.trim().replace(/\s+/g, ' ');
+  const words = text.split(' ');
+  const sr = document.createElement('span'); sr.className = 'sr'; sr.textContent = text;
+  const vis = document.createElement('span'); vis.setAttribute('aria-hidden', 'true');
+  const spread = mode === 'gate' ? 0.5 : mode === 'sweep' ? 0.6 : mode === 'slat' ? 0.5 : 0.4;
+  let glue = null;
+  words.forEach((w, wi) => {
+    const ws = document.createElement('span'); ws.className = 'w' + (em.includes(w) ? ' em' : '');
+    const inner = document.createElement('span'); inner.className = 'wi'; inner.textContent = w;
+    ws.appendChild(inner);
+    ws.style.setProperty('--th', (wi / words.length * spread).toFixed(3));
+    /* a one or two letter word never ends a line: it rides with the word after it */
+    const short = wi < words.length - 1 && w.replace(/[.,?!]/g, '').length <= 2;
+    if (short && !glue) { glue = document.createElement('span'); glue.style.whiteSpace = 'nowrap'; vis.appendChild(glue); }
+    (glue || vis).appendChild(ws);
+    if (!short) glue = null;
+    /* the one place a line is told where to break */
+    if (w === el.dataset.break) { vis.appendChild(document.createElement('br')); return; }
+    if (wi < words.length - 1) (glue || vis).appendChild(document.createTextNode(' '));
+  });
+  el.textContent = ''; el.append(sr, vis);
+}
+$$('[data-split]').forEach(splitText);
+
+/* ---------- the scrub hero ---------- */
+const hero = $('.hero'), stage = $('.stage'), video = $('#heroVideo');
+const posterLayer = $('.poster'), endLayer = $('.poster-end'), ring = $('.ring'), cue = $('.cue');
+const VIDEO_URL = 'assets/hero-scrub.mp4';
+const VIDEO_BYTES = 5772347;
+const bands = $$('.band').map((el, i, all) => ({
+  el, a: Number(el.dataset.a), b: Number(el.dataset.b), ramp: Number(el.dataset.ramp) || 0,
+  first: i === 0, last: i === all.length - 1, op: -1, k: -1
+}));
+
+let range = 1;
+function measure() { range = Math.max(1, hero.offsetHeight - innerHeight); }
+function heroProgress() { return clamp(-hero.getBoundingClientRect().top / range, 0, 1); }
+
+let target = 0, shown = 0, rafId = null, lastTick = 0, heroOnScreen = true;
+let loadK = 0, loadStart = 0, videoFailed = false;
+let cueOp = -1, endOp = -1, footOp = -1;
+
+function updateCaptions(p) {
+  for (const b of bands) {
+    const len = b.b - b.a, f = Math.min(0.02, len / 3);
+    const op = (b.first ? 1 : smoothstep(p, b.a, b.a + f)) * (b.last ? 1 : 1 - smoothstep(p, b.b - f, b.b));
+    let k = clamp((p - b.a) / (b.ramp || Math.min(0.025, len * 0.35)), 0, 1);
+    if (b.first) k = Math.max(k, loadK);
+    if (Math.abs(op - b.op) > 0.004 || ((op === 0 || op === 1) && op !== b.op)) {
+      if ((op === 0) !== (b.op === 0) || b.op === -1) b.el.style.visibility = op === 0 ? 'hidden' : 'visible';
+      b.op = op; b.el.style.opacity = op.toFixed(3);
+    }
+    if (Math.abs(k - b.k) > 0.008 || ((k === 0 || k === 1) && k !== b.k)) {
+      b.k = k; b.el.style.setProperty('--k', k.toFixed(3));
+    }
+  }
+  const c = (1 - smoothstep(p, 0.015, 0.07)) * loadK;
+  if (Math.abs(c - cueOp) > 0.01 || ((c === 0 || c === 1) && c !== cueOp)) { cueOp = c; cue.style.opacity = c.toFixed(2); }
+  const ft = smoothstep(p, 0.92, 1);
+  if (Math.abs(ft - footOp) > 0.01 || ((ft === 0 || ft === 1) && ft !== footOp)) { footOp = ft; stage.style.setProperty('--foot', ft.toFixed(2)); }
+  if (videoFailed && !seqReady) {
+    const e = smoothstep(p, 0.26, 0.5);
+    if (Math.abs(e - endOp) > 0.01 || ((e === 0 || e === 1) && e !== endOp)) { endOp = e; endLayer.style.opacity = e.toFixed(2); }
+  }
+}
+
+/* seeks never overlap: keep only the newest target, one follow-up per completion */
+let seekBusy = false, pendingTime = null, lastSeek = -1;
+function requestSeek(t) {
+  if (!video.duration) return;
+  t = clamp(t, 0, video.duration - 0.05);
+  if (seekBusy) { pendingTime = t; return; }
+  if (Math.abs(t - lastSeek) < 0.012) return;
+  seekBusy = true; lastSeek = t;
+  video.currentTime = t;
+}
+video.addEventListener('seeked', () => {
+  seekBusy = false;
+  if (pendingTime !== null) { const t = pendingTime; pendingTime = null; requestSeek(t); }
+});
+video.addEventListener('error', () => { seekBusy = false; pendingTime = null; });
+
+function tick(now) {
+  const dt = Math.min(100, now - (lastTick || now));
+  lastTick = now;
+  const k = 0.16;
+  shown += (target - shown) * (1 - Math.pow(1 - k, dt / 16.667));
+  if (Math.abs(target - shown) < 0.0005) { shown = target; rafId = null; lastTick = 0; }
+  else rafId = requestAnimationFrame(tick);
+  requestSeek(shown * video.duration);
+  drawSeq(shown);
+  updateCaptions(shown);
+}
+function onScroll() {
+  target = heroProgress();
+  if (rafId === null && heroOnScreen) rafId = requestAnimationFrame(tick);
+}
+
+/* band one assembles once on load, then scroll owns it */
+function loadRamp(now) {
+  if (!loadStart) loadStart = now;
+  const t = clamp((now - loadStart) / 1500, 0, 1);
+  loadK = 1 - Math.pow(1 - t, 3);
+  updateCaptions(shown);
+  if (t < 1) requestAnimationFrame(loadRamp);
+}
+
+/* the poster paints first, then the video streams in behind an honest ring */
+let fetchStarted = false;
+function startBlobFetch() {
+  if (fetchStarted) return;
+  fetchStarted = true;
+  /* a visitor who asked their phone to save data gets the still-image journey, nothing more to download */
+  if (navigator.connection && navigator.connection.saveData) { useStills(false); return; }
+  /* touch devices scrub the frame sequence: seeking a video is unreliable there, and in-app browsers refuse it */
+  if (COARSE.matches) { useStills(true); return; }
+  loadHeroBlob().catch(() => useStills(true));
+}
+async function loadHeroBlob() {
+  const ctrl = new AbortController();
+  let watchdog = setTimeout(() => ctrl.abort(), 20000);
+  const res = await fetch(VIDEO_URL, { priority: 'low', signal: ctrl.signal });
+  if (!res.ok || !res.body) throw new Error('video ' + res.status);
+  const total = Number(res.headers.get('Content-Length')) || VIDEO_BYTES;
+  const reader = res.body.getReader();
+  const chunks = [];
+  let got = 0, lastRing = 0;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    clearTimeout(watchdog);
+    watchdog = setTimeout(() => ctrl.abort(), 20000);
+    chunks.push(value);
+    got += value.length;
+    const frac = Math.min(1, got / total);
+    const now = performance.now();
+    if (now - lastRing > 100 || frac === 1) { lastRing = now; ring.style.setProperty('--ld', Math.round(126 * (1 - frac))); }
+  }
+  clearTimeout(watchdog);
+  ring.style.setProperty('--ld', 0);
+  let ready = false;
+  const onReady = () => {
+    if (ready || videoFailed || !video.duration) return;
+    ready = true;
+    video.pause();
+    lastSeek = -1;
+    requestSeek(heroProgress() * video.duration);
+    stage.classList.add('video-ready');
+  };
+  video.addEventListener('error', () => useStills(true), { once: true });
+  ['loadeddata', 'canplay'].forEach(t => video.addEventListener(t, onReady));
+  video.src = URL.createObjectURL(new Blob(chunks, { type: 'video/mp4' }));
+  video.load();
+  /* some browsers decode nothing until playback starts once: a muted play, paused at once, primes the decoder */
+  const p = video.play();
+  if (p && p.then) p.then(() => { video.pause(); onReady(); }).catch(() => {});
+  /* a browser that refuses to decode falls back to the frame sequence */
+  setTimeout(() => { if (!ready) useStills(true); }, 5000);
+}
+/* the still-image journey: the closed gate crossfades to the open store. With frames, the sequence takes over on top of it */
+function useStills(frames) {
+  if (!videoFailed) {
+    videoFailed = true;
+    endLayer.style.backgroundImage = "url('assets/hero-ending.jpg')";
+    stage.classList.remove('video-ready');
+    stage.classList.add('video-failed');
+    endOp = -1; updateCaptions(shown);
+  }
+  if (frames) startSequence();
+}
+
+/* ---------- the frame sequence: the same journey from still frames on a canvas ----------
+   Phones and tablets use it instead of the video, and it is the fallback wherever the video will not scrub.
+   In-app browsers (a link opened inside WhatsApp or Instagram) and low power mode refuse to seek a video,
+   but every browser can draw an image. The gate is fully up at frame 62; the rest of the scroll holds it. */
+const canvas = $('#heroCanvas');
+const SEQ_N = 63, SEQ_SPAN = 79;
+const seqUrl = i => 'assets/seq/f' + String(i).padStart(3, '0') + '.jpg';
+const seqImgs = new Array(SEQ_N);
+let seqOn = false, seqReady = false, seqLoaded = 0, seqShown = -1, seqCtx = null, seqRingAt = 0;
+function drawSeq(p) {
+  if (!seqOn || !seqLoaded) return;
+  const want = Math.min(SEQ_N - 1, Math.round(clamp(p, 0, 1) * SEQ_SPAN));
+  let best = -1;
+  for (let d = 0; d < SEQ_N && best < 0; d++) {
+    if (seqImgs[want - d]) best = want - d;
+    else if (seqImgs[want + d]) best = want + d;
+  }
+  if (best < 0 || best === seqShown) return;
+  seqShown = best;
+  seqCtx.drawImage(seqImgs[best], 0, 0, canvas.width, canvas.height);
+  canvas.dataset.f = best;
+  if (!seqReady) { seqReady = true; stage.classList.add('seq-ready'); }
+}
+function startSequence() {
+  if (seqOn) return;
+  seqOn = true;
+  seqCtx = canvas.getContext('2d');
+  stage.classList.add('seq-loading');
+  /* coarse to fine: every 8th frame first, so the whole journey scrubs almost at once, then the gaps fill in */
+  const order = [], seen = new Set();
+  for (const step of [8, 4, 2, 1]) for (let i = 0; i < SEQ_N; i += step) if (!seen.has(i)) { seen.add(i); order.push(i); }
+  if (!seen.has(SEQ_N - 1)) order.splice(8, 0, SEQ_N - 1);
+  let next = 0, active = 0, settled = 0;
+  const settle = () => {
+    settled++; active--;
+    const now = performance.now();
+    if (now - seqRingAt > 100 || settled === SEQ_N) { seqRingAt = now; ring.style.setProperty('--ld', Math.round(126 * (1 - settled / SEQ_N))); }
+    if (settled === SEQ_N) stage.classList.remove('seq-loading');
+    pump();
+  };
+  const pump = () => {
+    while (active < 6 && next < order.length) {
+      const i = order[next++], im = new Image();
+      active++;
+      im.onload = () => { seqImgs[i] = im; seqLoaded++; settle(); drawSeq(shown); };
+      im.onerror = settle;
+      im.src = seqUrl(i);
+    }
+  };
+  pump();
+}
+let heroInit = false;
+function initHeroOnce() {
+  if (heroInit) return;
+  heroInit = true;
+  posterLayer.style.backgroundImage = "url('assets/hero-poster.jpg')";
+  const img = new Image();
+  img.onload = startBlobFetch; img.onerror = startBlobFetch;
+  img.src = 'assets/hero-poster.jpg';
+  setTimeout(startBlobFetch, 4000);
+  requestAnimationFrame(loadRamp);
+  setTimeout(() => { if (loadK < 1) { loadK = 1; updateCaptions(shown); } }, 2600);
+}
+
+/* the static-hero gates, identical to the CSS, decided live.
+   Phones and tablets held upright get the journey too, drawn from the frame sequence, with the frame across the
+   top of the screen and the words below. Only a phone held sideways and reduced motion get the still hero. */
+const GATES = [
+  '(orientation: landscape) and (pointer: coarse) and (max-height: 560px)',
+  '(prefers-reduced-motion: reduce)'
+];
+let scrubOn = false;
+function enableScrub() {
+  if (scrubOn) return; scrubOn = true;
+  measure();
+  initHeroOnce();
+  addEventListener('scroll', onScroll, { passive: true });
+  bands.forEach(b => { b.op = -1; b.k = -1; });
+  cueOp = endOp = footOp = -1; lastSeek = -1;
+  unpinFinalStates();
+  shown = target = heroProgress();
+  updateCaptions(shown);
+  requestSeek(shown * video.duration);
+  drawSeq(shown);
+  onScroll();
+}
+function disableScrub() {
+  if (!scrubOn) return; scrubOn = false;
+  removeEventListener('scroll', onScroll);
+  if (rafId !== null) { cancelAnimationFrame(rafId); rafId = null; lastTick = 0; }
+}
+function applyHeroMode() {
+  if (GATES.some(q => matchMedia(q).matches)) disableScrub();
+  else enableScrub();
+}
+const MQLS = GATES.map(q => matchMedia(q));
+MQLS.forEach(m => onMQ(m, applyHeroMode));
+new IntersectionObserver(es => {
+  heroOnScreen = es[0].isIntersecting;
+  if (heroOnScreen && scrubOn) onScroll();
+}).observe(hero);
+
+/* ---------- nav: cream over the gate, solid before the pale floor reaches it ---------- */
+const nav = $('.nav');
+let navSolid = null;
+function navState() {
+  const solid = hero.getBoundingClientRect().bottom < innerHeight * (SPLIT.matches ? 0.84 : 0.68);
+  if (solid !== navSolid) { navSolid = solid; nav.classList.toggle('solid', solid); }
+}
+
+/* ---------- the three doors: each gate lifts as it scrolls in, and comes back down on the way up ---------- */
+const doorsEl = $('#doors');
+const doors = $$('.door', doorsEl).map(el => ({ el, open: -1 }));
+let doorsOnScreen = false, doorsPinned = false;
+function writeDoor(d, o) {
+  if (Math.abs(o - d.open) > 0.004 || ((o === 0 || o === 1) && o !== d.open)) { d.open = o; d.el.style.setProperty('--open', o.toFixed(3)); }
+}
+function driveDoors() {
+  if (doorsPinned) return;
+  const vh = innerHeight;
+  for (const d of doors) {
+    const r = d.el.getBoundingClientRect();
+    writeDoor(d, smoothstep((vh * 0.97 - r.top) / (vh * 0.36), 0, 1));
+  }
+}
+new IntersectionObserver(es => {
+  doorsOnScreen = es[0].isIntersecting;
+  if (doorsOnScreen) driveDoors();
+}, { rootMargin: '12% 0px 12% 0px' }).observe(doorsEl);
+
+/* ---------- the four steps: the rail draws itself with the scroll ---------- */
+const stepsEl = $('#steps');
+const stepItems = $$('.step', stepsEl).map((el, i, all) => ({ el, thr: i / all.length, on: null }));
+let stepsOnScreen = false, stepsPinned = false, drawn = -1;
+function writeSteps(p) {
+  if (Math.abs(p - drawn) > 0.003 || ((p === 0 || p === 1) && p !== drawn)) { drawn = p; stepsEl.style.setProperty('--draw', p.toFixed(4)); }
+  for (const it of stepItems) {
+    const on = p >= it.thr + 0.015;
+    if (on !== it.on) { it.on = on; it.el.classList.toggle('on', on); }
+  }
+}
+function driveSteps() {
+  if (stepsPinned) return;
+  const r = stepsEl.getBoundingClientRect(), vh = innerHeight;
+  const span = STACKED.matches ? Math.max(1, r.height - vh * 0.06) : vh * 0.5;
+  writeSteps(clamp((vh * 0.82 - r.top) / span, 0, 1));
+}
+new IntersectionObserver(es => {
+  stepsOnScreen = es[0].isIntersecting;
+  if (stepsOnScreen) driveSteps();
+}, { rootMargin: '12% 0px 12% 0px' }).observe(stepsEl);
+
+/* one rAF-throttled scroll pass for everything below the hero */
+let pageRaf = null;
+function onPageScroll() {
+  if (pageRaf !== null) return;
+  pageRaf = requestAnimationFrame(() => {
+    pageRaf = null;
+    navState();
+    if (doorsOnScreen) driveDoors();
+    if (stepsOnScreen) driveSteps();
+  });
+}
+addEventListener('scroll', onPageScroll, { passive: true });
+addEventListener('resize', () => { measure(); if (scrubOn) onScroll(); onPageScroll(); }, { passive: true });
+
+/* ---------- entrances, living elements, hidden-tab pause ---------- */
+const revealIO = new IntersectionObserver((es, io) => {
+  for (const e of es) {
+    if (!e.isIntersecting) continue;
+    e.target.classList.add('in');
+    setTimeout(() => e.target.classList.add('done'), 1900);
+    io.unobserve(e.target);
+  }
+}, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+$$('.reveal').forEach(el => revealIO.observe(el));
+const liveIO = new IntersectionObserver(es => {
+  for (const e of es) e.target.classList.toggle('live', e.isIntersecting);
+});
+$$('.sec').forEach(el => liveIO.observe(el));
+document.addEventListener('visibilitychange', () => {
+  document.body.classList.toggle('paused', document.hidden);
+});
+
+/* dust in the morning light of the fixed environment, seeded */
+(() => {
+  const env = $('.env'), r = rng(2026);
+  for (let i = 0; i < 14; i++) {
+    const m = document.createElement('i'); m.className = 'mote';
+    const d = 24 + r() * 22;
+    m.style.setProperty('--x', (r() * 100).toFixed(1) + '%');
+    m.style.setProperty('--y', (14 + r() * 82).toFixed(1) + '%');
+    m.style.setProperty('--s', (1.8 + r() * 2.2).toFixed(1) + 'px');
+    m.style.setProperty('--mx', ((r() * 2 - 1) * 50).toFixed(0) + 'px');
+    m.style.setProperty('--d', d.toFixed(1) + 's');
+    m.style.setProperty('--dl', (-r() * d).toFixed(1) + 's');
+    env.appendChild(m);
+  }
+})();
+
+/* ---------- the one interactive moment: hold the button, the gate over the record goes up ---------- */
+const hold = $('#hold'), holdBtn = $('.hold-btn'), holdLbl = $('.hold-btn .lbl'), holdLblIn = $('.hold-btn .fill-in'), holdMsg = $('#hold-msg');
+let hp = 0, hpWritten = -1, holding = false, holdDone = false, holdPinned = false, holdRaf = null, holdLast = 0;
+function writeHp() {
+  if (Math.abs(hp - hpWritten) > 0.003 || ((hp === 0 || hp === 1) && hp !== hpWritten)) { hpWritten = hp; hold.style.setProperty('--hp', hp.toFixed(3)); }
+}
+function holdTick(now) {
+  const dt = Math.min(100, now - (holdLast || now));
+  holdLast = now;
+  if (holding) hp = Math.min(1, hp + dt / 1900);
+  else { hp += (0 - hp) * (1 - Math.pow(1 - 0.07, dt / 16.667)); if (hp < 0.004) hp = 0; }
+  writeHp();
+  if (hp >= 1) { holdRaf = null; holdLast = 0; completeHold(false); return; }
+  if (!holding && hp === 0) { holdRaf = null; holdLast = 0; return; }
+  holdRaf = requestAnimationFrame(holdTick);
+}
+function startHold() {
+  if (holdDone) return;
+  if (RM.matches) { completeHold(false); return; }
+  holding = true; hold.classList.add('holding');
+  if (holdRaf === null) holdRaf = requestAnimationFrame(holdTick);
+}
+function endHold() { holding = false; hold.classList.remove('holding'); }
+function completeHold(pinned) {
+  holdDone = true; holdPinned = pinned; holding = false; hp = 1; writeHp();
+  hold.classList.remove('holding'); hold.classList.add('done');
+  holdLbl.textContent = holdLblIn.textContent = 'Aberto';
+  holdBtn.setAttribute('aria-disabled', 'true');
+  holdMsg.textContent = 'É assim com todo carro do pátio. Antes de você perguntar.';
+  holdMsg.classList.add('on');
+}
+function resetHold() {
+  holdDone = false; holdPinned = false; hp = 0; writeHp();
+  hold.classList.remove('done');
+  holdLbl.textContent = holdLblIn.textContent = 'Segure para abrir';
+  holdBtn.removeAttribute('aria-disabled');
+  holdMsg.textContent = ''; holdMsg.classList.remove('on');
+}
+holdBtn.addEventListener('pointerdown', e => { if (e.button === 0) startHold(); });
+['pointerup', 'pointerleave', 'pointercancel', 'blur'].forEach(t => holdBtn.addEventListener(t, endHold));
+holdBtn.addEventListener('contextmenu', e => e.preventDefault());
+holdBtn.addEventListener('keydown', e => {
+  if (e.key !== ' ' && e.key !== 'Enter') return;
+  e.preventDefault(); if (!e.repeat) startHold();
+});
+holdBtn.addEventListener('keyup', e => { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); endHold(); } });
+/* a click with no pointer behind it (a screen reader, a switch) opens it at once */
+holdBtn.addEventListener('click', e => { if (e.detail === 0 && !holdDone) completeHold(false); });
+
+/* a car type picked in the stock section arrives already checked in the form */
+$$('[data-tipo]').forEach(a => a.addEventListener('click', () => {
+  const r = document.querySelector('#form input[name="procura"][value="' + a.dataset.tipo + '"]');
+  if (r) r.checked = true;
+}));
+
+/* reduced motion, honored live in both directions */
+function pinToFinalStates() {
+  if (!holdDone) completeHold(true);
+  doorsPinned = true; doors.forEach(d => writeDoor(d, 1));
+  stepsPinned = true; writeSteps(1);
+}
+function unpinFinalStates() {
+  if (holdPinned) resetHold();
+  if (doorsPinned) { doorsPinned = false; driveDoors(); }
+  if (stepsPinned) { stepsPinned = false; driveSteps(); }
+}
+onMQ(RM, e => {
+  if (e.matches) pinToFinalStates();
+  else { unpinFinalStates(); applyHeroMode(); }
+  navState();
+});
+onMQ(SPLIT, navState);
+
+/* ---------- the form: a demo, so the success state says nothing was sent ---------- */
+const form = $('#form'), formOk = $('#form-ok');
+function setErr(fieldId, errId, msg) {
+  $('#' + fieldId).classList.toggle('bad', !!msg);
+  $('#' + errId).textContent = msg;
+}
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const nome = form.nome.value.trim(), tel = form.tel.value.replace(/\D/g, '');
+  setErr('f-nome', 'e-nome', nome ? '' : 'Diga seu nome para a gente saber com quem fala.');
+  setErr('f-tel', 'e-tel', tel.length >= 10 ? '' : 'Deixe um WhatsApp para a gente responder.');
+  if (!nome) { form.nome.focus(); return; }
+  if (tel.length < 10) { form.tel.focus(); return; }
+  formOk.classList.add('on');
+});
+
+/* ---------- go ---------- */
+measure();
+applyHeroMode();
+if (RM.matches) pinToFinalStates();
+navState();
+driveDoors();
+driveSteps();
+})();
+</script>
+</body>
+</html>
